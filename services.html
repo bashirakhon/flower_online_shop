@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Цветочный Магазин Орхидея</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <header>
+        <h1>Цветочный Магазин Орхидея</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="account.html">Личный Кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <div class="service">
+                <h3>Оформление букетов на заказ</h3>
+                <p>Создаем уникальные букеты для всех ваших особенных моментов. Выберите свои любимые цветы и цветовую гамму.</p>
+                <img src="imgg/оформлениезаказов.png" alt="Оформление букетов на заказ">
+                <button class="contact-btn" onclick="openModal('Оформление букетов на заказ')">Связаться</button>
+            </div>
+            <div class="service">
+                <h3>Оформление мероприятий</h3>
+                <p>Оформляем цветами свадьбы, корпоративные мероприятия и вечеринки. Мы придадим вашему событию незабываемую атмосферу.</p>
+                <img src="imgg/мероприятия.png" alt="Оформление мероприятий">
+                <button class="contact-btn" onclick="openModal('Оформление мероприятий')">Связаться</button>
+            </div>
+            <div class="service">
+                <h3>Быстрая и надежная доставка</h3>
+                <p>Предоставляем быструю и надежную доставку цветов по всей территории. Специальные условия для больших заказов.</p>
+                <img src="imgg/доставка.png" alt="Быстрая и надежная доставка">
+                <button class="contact-btn" onclick="openModal('Быстрая и надежная доставка')">Связаться</button>
+            </div>
+            <div class="service">
+                <h3>Подарочные карты</h3>
+                <p>Подарите своим близким радость с нашими подарочными картами. Различные номиналы и специальные предложения.</p>
+                <img src="imgg/подарочные карты.png" alt="Подарочные карты">
+                <button class="contact-btn" onclick="openModal('Подарочные карты')">Связаться</button>
+            </div>
+            <div class="service">
+                <h3>Консультации флориста</h3>
+                <p>Получите консультации от профессиональных флористов. Помощь в выборе цветов и создании композиций.</p>
+                <img src="imgg/флорист.png" alt="Консультации флориста">
+                <button class="contact-btn" onclick="openModal('Консультации флориста')">Связаться</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Цветочный магазин. Все права защищены.</p>
+        <div class="contacts">
+            <p>Телефон: +123 456 7890</p>
+            <p>Инстаграм: @flowershop</p>
+            <p>Телеграм: @flowershop</p>
+            <p>Вацап: +123 456 7890</p>
+        </div>
+    </footer>
+    
+    <!-- Модальное окно -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Связаться</h2>
+            <p id="serviceName"></p>
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(serviceName) {
+            document.getElementById('contactModal').style.display = 'block';
+            document.getElementById('serviceName').innerText = serviceName;
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        // Закрытие модального окна при клике вне его области
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
+ <main>
+        <section id="services">
+            <h2>Наши Услуги</h2>
+            <ul>
+                <li>Доставка цветов</li>
+                <li>Создание цветочных композиций</li>
+                <li>Оформление свадеб и мероприятий</li>
+            </ul>
+            <footer>
+                <p>2024 Цветочный магазин. Все права защищены.</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

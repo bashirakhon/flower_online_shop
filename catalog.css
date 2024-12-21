@@ -1,0 +1,425 @@
+/* Подключение Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Общие стили */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основной стиль для тела */
+body {
+    font-family: 'Roboto', sans-serif; /* Основной шрифт для текста */
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333; /* Темно-серый цвет текста для хорошей читаемости */
+}
+
+/* Стиль для заголовков */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Шрифт с засечками для заголовков */
+    font-style: italic; /* Курсив для заголовков */
+    color: #9b486f; /* Мягкий розовый цвет */
+}
+
+h1 {
+    font-size: 2.5rem; /* Размер заголовка 1 */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem; /* Размер заголовка 2 */
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem; /* Размер заголовка 3 */
+    margin-bottom: 0.5rem;
+}
+
+/* Стиль для параграфов */
+p {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #8b0142; /* Немного светлее цвет для текста */
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Стиль для ссылок */
+a {
+    color: #9b486f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff69b4; /* Розовый цвет при наведении */
+}
+
+/* Шрифты и стили для других элементов */
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Шапка */
+header {
+    background-color: #ffb6c1; /* Нежно-розовый цвет */
+    color: white;
+    padding: 1rem 0;
+    text-align: center; 
+}
+
+
+
+/* Стилизация навигационного меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: #f8f9fa; /* Светлый фон для меню */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    margin-top: 1rem; /* Отступ сверху */
+}
+
+/* Стилизация элементов списка */
+nav ul li {
+    margin: 0 1.5rem; /* Увеличенный отступ между пунктами */
+}
+
+/* Стилизация ссылок */
+nav ul li a {
+    color: #333; /* Темный цвет текста */
+    font-weight: 500; /* Средняя жирность */
+    text-decoration: none;
+    font-size: 1.2rem; /* Увеличенный размер шрифта */
+    text-transform: capitalize; /* Не в верхнем регистре, но с заглавной буквы */
+    position: relative;
+    display: block;
+    padding: 0.8rem 0; /* Увеличены отступы для лучшего визуального восприятия */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект наведения на ссылки */
+nav ul li a:hover {
+    color: #ff1493; /* Яркий розовый цвет при наведении */
+    transform: scale(1.1); /* Увеличение текста при наведении */
+}
+
+/* Добавим подчеркивание при наведении */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #ff1493; /* Розовая линия */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Стилизация активной ссылки */
+nav ul li a.active {
+    color: #ff1493; /* Розовый цвет для активных ссылок */
+    font-weight: bold; /* Жирный шрифт для активных ссылок */
+}
+
+/* Каталог */
+#catalog {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.product p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+/* Основной стиль для уникальных цветов */
+#catalog {
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #ff88aa;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Обертка для блоков категорий */
+.catalog-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Блоки категорий */
+.category-block {
+    width: 30%;
+    min-width: 300px;
+}
+
+.category-block h3 {
+    color: #ff88aa;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Стилизация для элементов (цветов) в блоках */
+.flower-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.flower-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flower-item img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.flower-item h4 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.flower-item p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.flower-item button {
+    background-color: #ff88aa;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.flower-item button:hover {
+    background-color: #ff6f9e;
+    transform: scale(1.05);
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    #catalog {
+        width: 95%;
+    }
+
+    .catalog-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-block {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .flower-item {
+        padding: 15px;
+    }
+
+    .flower-item img {
+        max-height: 200px;
+    }
+}
+
+footer {
+    background-color: #ffe4e1;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+footer h2 {
+    font-size: 28px;
+    color: #d147a3;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Стиль для контейнера корзины */
+.cart {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрируем текст внутри контейнера */
+}
+
+/* Заголовок корзины */
+.cart h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Список товаров в корзине */
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+    text-align: left; /* Список будет слева */
+}
+
+/* Элементы списка товаров */
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Итоговая сумма */
+#total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Кнопка оформления заказа */
+#order-button {
+    background-color: #ffb6c1; /* Нежно-розовый цвет */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Отступ сверху */
+}
+
+/* Эффект наведения на кнопку */
+#order-button:hover {
+    background-color: #ff80a3; /* Темнее розовый при наведении */
+}
+
+/* Блок с корзиной на мобильных устройствах */
+@media (max-width: 768px) {
+    .cart {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #order-button {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff88aa; /* Нежно-розовый фон */
+    color: white;
+    font-size: 14px;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Кабинет - Цветочный Магазин Орхидея</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <header>
+        <h1>Цветочный Магазин Орхидея</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="account.html">Личный Кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="account">
+<section id="account">
+    <h2>Личный Кабинет</h2>
+    <p>Здесь вы можете просматривать свою историю заказов, редактировать личные данные и управлять подписками.</p>
+    
+    <!-- Контейнер для авторизации и регистрации -->
+    <div class="content-wrapper">
+        <!-- Форма авторизации -->
+        <div class="form-container">
+            <div class="login-container">
+                <h2>Авторизация</h2>
+                <form id="login-form">
+                    <label for="username">Логин:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Войти</button>
+                    
+                    <p>Нет аккаунта? <a href="#" id="show-register">Зарегистрироваться</a></p>
+                </form>
+            </div>
+    
+            <!-- Форма регистрации -->
+            <div class="register-container" id="register-container">
+                <h2>Регистрация</h2>
+                <form id="register-form">
+                    <label for="new-username">Логин:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                    
+                    <label for="new-email">Email:</label>
+                    <input type="email" id="new-email" name="new-email" required>
+                    
+                    <label for="new-password">Пароль:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                    
+                    <button type="submit">Зарегистрироваться</button>
+                    
+                    <p>Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Разделы Личного кабинета -->
+    <div class="section-container" id="order-history">
+        <h3>История заказов</h3>
+        <ul id="order-list">
+            <!-- Заказы будут загружаться сюда -->
+        </ul>
+        <button class="section-button" onclick="viewAllOrders()">Просмотреть все заказы</button>
+    </div>
+
+    <div class="section-container" id="personal-info">
+        <h3>Личные данные</h3>
+        <ul>
+            <li>Имя: <span id="user-name">Хошимова Мубаширахон</span></li>
+            <li>Email: <span id="user-email">hm@example.com</span></li>
+            <li>Телефон: <span id="user-phone">+992 92 604 90 09</span></li>
+        </ul>
+        <button class="section-button" onclick="editPersonalInfo()">Редактировать</button>
+    </div>
+
+ 
+
+            <script>
+                // Функция для загрузки истории заказов
+                function loadOrderHistory() {
+                    const orderList = document.getElementById('order-list');
+                    const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+                    
+                    if (orderHistory.length === 0) {
+                        orderList.innerHTML = '<li>У вас еще нет заказов.</li>';
+                        return;
+                    }
+
+                    orderList.innerHTML = ''; // Очищаем список
+                    orderHistory.forEach((order, index) => {
+                        const orderItem = document.createElement('li');
+                        const orderDate = new Date(); // Текущая дата
+                        orderItem.textContent = `Заказ #${index + 1} - Дата: ${orderDate.toLocaleDateString()} - Сумма: ${order.reduce((total, item) => total + item.price, 0)} сом.`;
+                        orderList.appendChild(orderItem);
+                    });
+                }
+
+                // Функция просмотра всех заказов
+                function viewAllOrders() {
+                    loadOrderHistory();
+                }
+
+                // Загрузка истории заказов при загрузке страницы
+                loadOrderHistory();
+            </script>
+        </section>
+    </main>
+</body>
+</html>
+    </div>
+<script>
+// Обработчики событий для разделов
+
+
+
+
+// Личные данные
+function editPersonalInfo() {
+    const userName = prompt('Введите новое имя:', document.getElementById('user-name').textContent);
+    const userEmail = prompt('Введите новый email:', document.getElementById('user-email').textContent);
+    const userPhone = prompt('Введите новый телефон:', document.getElementById('user-phone').textContent);
+
+    if (userName) document.getElementById('user-name').textContent = userName;
+    if (userEmail) document.getElementById('user-email').textContent = userEmail;
+    if (userPhone) document.getElementById('user-phone').textContent = userPhone;
+}
+
+// Управление подписками
+function manageSubscriptions() {
+    alert('Перенаправление на управление подписками...');
+}
+</script>
+            <script>
+                const showRegisterLink = document.getElementById('show-register');
+                const showLoginLink = document.getElementById('show-login');
+                const loginContainer = document.querySelector('.login-container');
+                const registerContainer = document.getElementById('register-container');
+        
+                showRegisterLink.addEventListener('click', function() {
+                    loginContainer.style.display = 'none';
+                    registerContainer.style.display = 'block';
+                });
+        
+                showLoginLink.addEventListener('click', function() {
+                    registerContainer.style.display = 'none';
+                    loginContainer.style.display = 'block';
+                });
+        
+                // Initial state
+                registerContainer.style.display = 'none';
+            </script>
+<footer>
+    <p>2024 Цветочный магазин. Все права защищены.</p>
+</footer>
+        
+        </section>
+    </main>
+</body>
+</html>

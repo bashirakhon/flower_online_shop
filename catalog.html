@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <!-- Включаем меню -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="index.html">О нас</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="account.html">Личный Кабинет</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Цветочный магазин Орхидея</h1>
+    </header>
+    <main>
+        <section id="catalog">
+            <h2>Наши букеты</h2>
+            <div class="catalog-wrapper">
+                <!-- Блок 1: Розы -->
+                <div class="category-block">
+                    <h3>Розы</h3>
+                    <div class="flowers-list">
+                        <div class="flower-item">
+                            <img src="img/розовые  розы.jpg" alt="Букет Розы 1">
+                            <h4>Розовые Розы</h4>
+                            <p>Цена: 800 cом.</p>
+                            <button class="add-to-cart" data-flower="Роза 1" data-price="800">Добавить в корзину</button>
+                        </div>
+                        <div class="flower-item">
+                            <img src="img/букетизбелыхроз.jpg" alt="Букет Розы 2">
+                            <h4>Белые Розы</h4>
+                            <p>Цена: 400 сом.</p>
+                            <button class="add-to-cart" data-flower="Роза 2" data-price="400">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Блок 2: Тюльпаны -->
+                <div class="category-block">
+                    <h3>Тюльпаны</h3>
+                    <div class="flowers-list">
+                        <div class="flower-item">
+                            <img src="img/тюльпан1.jpg" alt="Букет Тюльпанов 1">
+                            <h4>Букет Тюльпанов</h4>
+                            <p>Цена: 200 сом.</p>
+                            <button class="add-to-cart" data-flower="Тюльпан 1" data-price="200">Добавить в корзину</button>
+                        </div>
+                        <div class="flower-item">
+                            <img src="img/23345.jpg" alt="Букет Тюльпанов 2">
+                            <h4>Букет Тюльпанов</h4>
+                            <p>Цена: 400 сом.</p>
+                            <button class="add-to-cart" data-flower="Тюльпан 2" data-price="400">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Блок 3: Лилии -->
+                <div class="category-block">
+                    <h3>Лилии</h3>
+                    <div class="flowers-list">
+                        <div class="flower-item">
+                            <img src="img/лилия1.jpg" alt="Букет Лилий 1">
+                            <h4>Букет Белых Лилий</h4>
+                            <p>Цена: 350 сом.</p>
+                            <button class="add-to-cart" data-flower="Лилия 1" data-price="350">Добавить в корзину</button>
+                        </div>
+                        <div class="flower-item">
+                            <img src="img/lily1.jpg" alt="Букет Лилий 2">
+                            <h4>Букет Лилий</h4>
+                            <p>Цена: 200 сом.</p>
+                            <button class="add-to-cart" data-flower="Лилия 2" data-price="200">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Новый раздел: Уникальные Цветы -->
+            <h2> Наши Уникальные Букеты</h2>
+            <div class="catalog-wrapper">
+                <!-- Блок 1: шоколадные -->
+                <div class="category-block">
+                    <div class="flowers-list">
+                        <div class="flower-item">
+                            <img src="img/букетизшоко.jpg" alt="Букет из шоколадных роз">
+                            <h4>Шоколадные Розы</h4>
+                            <p>Цена: 500 сом.</p>
+                            <button class="add-to-cart" data-flower="Шоколадные Розы" data-price="500">Добавить в корзину</button>
+                        </div>
+                        <div class="flower-item">
+                            <img src="img/деньги.jpg"Букет из денег">
+                            <h4>Букет из Денег</h4>
+                            <p>Цена: 600 сом.</p>
+                            <button class="add-to-cart" data-flower="Букет из денег" data-price="600">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Блок 2: Уникальные букеты -->
+                <div class="category-block">
+                    <h3></h3>
+                    <div class="flowers-list">
+                        <div class="flower-item">
+                            <img src="img/клубника.jpg" alt="Букет из клубник">
+                            <h4>Шоколадные Клубники</h4>
+                            <p>Цена: 750 сом.</p>
+                            <button class="add-to-cart" data-flower="Букет из шоколадных клубник" data-price="750">Добавить в корзину</button>
+                        </div>
+                        <div class="flower-item">
+                            <img src="img/конфет.jpg" alt="Букет из Шоколадов">
+                            <h4>Букет из Шоколадов</h4>
+                            <p>Цена: 800 сом.</p>
+                            <button class="add-to-cart" data-flower="Букет из Шоколадов" data-price="800">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Блок 2: Уникальные букеты -->
+                 <div class="category-block">
+                    <div class="flowers-list">
+                        <div class="flower-item">
+                            <img src="img/букет из бабочес.jpg" alt="Букет из бабочек">
+                            <h4>Букет из Бабочек</h4>
+                            <p>Цена: 500 сом.</p>
+                            <button class="add-to-cart" data-flower="букет из бабочек" data-price="500">Добавить в корзину</button>
+                        </div>
+                        <div class="flower-item">
+                            <img src="img/мандарины.jpg" alt="Букет из Мандаринов">
+                            <h4>Букет из Мандаринов</h4>
+                            <p>Цена: 400 сом.</p>
+                            <button class="add-to-cart" data-flower="Букет из Мандаринов" data-price="400">Добавить в корзину</button>
+                        </div>
+            </div>
+
+    <div class="cart">
+        <h3>Корзина</h3>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Итого: 0 сом.</p>
+        <button id="order-button">Оформить заказ</button>
+    </div>
+</div>
+</section>
+</main>
+
+<script>
+let korzina = JSON.parse(localStorage.getItem('korzina')) || [];
+
+// Функция добавления товара в корзину
+document.querySelectorAll('.add-to-cart').forEach(button => {
+button.addEventListener('click', function () {
+    const flowerName = this.getAttribute('data-flower');
+    const flowerPrice = parseFloat(this.getAttribute('data-price'));
+
+    // Добавляем товар в корзину
+    korzina.push({ name: flowerName, price: flowerPrice });
+    updateCart();
+});
+});
+
+// Функция обновления корзины
+function updateCart() {
+const cartItemsList = document.getElementById('cart-items');
+const totalPriceElement = document.getElementById('total-price');
+
+// Очистить корзину
+cartItemsList.innerHTML = '';
+let totalPrice = 0;
+
+// Добавить товары в корзину
+korzina.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${item.name} - ${item.price} сом.`;
+    cartItemsList.appendChild(listItem);
+    totalPrice += item.price;
+});
+
+// Обновить итоговую сумму
+totalPriceElement.textContent = `Итого: ${totalPrice} сом.`;
+
+// Сохраняем корзину в localStorage
+localStorage.setItem('korzina', JSON.stringify(korzina));
+}
+
+// Обработчик кнопки оформления заказа
+document.getElementById('order-button').addEventListener('click', function() {
+if (korzina.length > 0) {
+    alert('Ваш заказ оформлен!');
+    saveOrderToHistory();
+    korzina = []; // Очищаем корзину после оформления
+    updateCart();
+} else {
+    alert('Ваша корзина пуста.');
+}
+});
+
+// Функция сохранения истории заказов
+function saveOrderToHistory() {
+const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+orderHistory.push(korzina);
+localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+}
+
+// Инициализируем корзину при загрузке страницы
+updateCart();
+</script>
+
+<footer>
+    <p>2024 Цветочный магазин. Все права защищены.</p>
+</footer>
+</body>
+</html>

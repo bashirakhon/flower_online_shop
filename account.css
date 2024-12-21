@@ -1,0 +1,240 @@
+/* Общие стили */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Шапка */
+header {
+    background-color: #ffb6c1; /* Нежно-розовый цвет */
+    color: white;
+    padding: 1rem 0;
+    text-align: center; 
+}
+
+
+
+/* Стилизация навигационного меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: #f8f9fa; /* Светлый фон для меню */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    margin-top: 1rem; /* Отступ сверху */
+}
+
+/* Стилизация элементов списка */
+nav ul li {
+    margin: 0 1.5rem; /* Увеличенный отступ между пунктами */
+}
+
+/* Стилизация ссылок */
+nav ul li a {
+    color: #333; /* Темный цвет текста */
+    font-weight: 500; /* Средняя жирность */
+    text-decoration: none;
+    font-size: 1.2rem; /* Увеличенный размер шрифта */
+    text-transform: capitalize; /* Не в верхнем регистре, но с заглавной буквы */
+    position: relative;
+    display: block;
+    padding: 0.8rem 0; /* Увеличены отступы для лучшего визуального восприятия */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект наведения на ссылки */
+nav ul li a:hover {
+    color: #ff1493; /* Яркий розовый цвет при наведении */
+    transform: scale(1.1); /* Увеличение текста при наведении */
+}
+
+/* Добавим подчеркивание при наведении */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #ff1493; /* Розовая линия */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Стилизация активной ссылки */
+nav ul li a.active {
+    color: #ff1493; /* Розовый цвет для активных ссылок */
+    font-weight: bold; /* Жирный шрифт для активных ссылок */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef0f5; /* Нежно розовый фон */
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff88aa; /* Нежно-розовый фон */
+    color: white;
+    font-size: 14px;
+}
+/* Стили для блока личного кабинета */
+#account {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #ff88aa; /* Розовый цвет для заголовков */
+}
+
+/* Контейнеры для форм */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-container {
+    width: 48%;
+}
+
+/* Стили для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f1c4d7; /* Светло-розовая рамка */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff88aa; /* Розовый цвет для фокуса */
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ff88aa; /* Розовый цвет кнопок */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6f9e; /* Темно-розовый оттенок при наведении */
+}
+
+/* Стили для ссылок */
+a {
+    color: #ff88aa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6f9e;
+}
+
+/* Контейнеры авторизации и регистрации */
+.login-container,
+.register-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.login-container h2,
+.register-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff88aa;
+}
+
+/* Скрытие / отображение форм */
+#register-container {
+    display: none;
+}
+
+/* Стиль для секций Личного кабинета (История заказов, Личные данные, Подписки) */
+.section-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.section-container h3 {
+    color: #ff88aa;
+    margin-bottom: 20px;
+}
+
+.section-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.section-container ul li {
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #f1c4d7;
+}
+
+.section-container ul li:last-child {
+    border-bottom: none;
+}
+
+button.section-button {
+    background-color: #ff88aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button.section-button:hover {
+    background-color: #ff6f9e;
+}
